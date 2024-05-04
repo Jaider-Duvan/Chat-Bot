@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-principal {
+   /* Ajusta el ancho máximo y el margen */
+   max-width: 800px;
+   margin: 20px auto;
+   /* Configuración de flexbox */
+   display: flex;
+   align-items: center;
+}
+
+/* Estilos para el logo */
+.logo img {
+    width: 400px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto;
+    border-radius: 30px ;
+    
+}
+
+/* Estilos para el contenedor del chat */
+.Chat-container {
+    /* Ajusta el espaciado y el sombreado */
+    padding: 10px;
+    margin-left: 60px;
+    box-shadow: 0 0 20px rgb(167, 166, 166);
+    flex: auto;
+    border: 0.5px black solid;
+    border-radius: 15px;
+}
+.titulo{
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
