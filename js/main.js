@@ -57,7 +57,7 @@ function generateBotResponse(userInput) {
             break;
         case "4":
         case "Crear-carpeta":
-            botResponse = "Para crear una carpeta ingresa a Drive, en la parte izquierda dale en nuevo y nueva carpeta, ponle un nombre a tu carpeta y dale aceptar ";
+            botResponse = "Para crear una carpeta ingresa a Drive, en la parte izquierda dale en nuevo y nueva carpeta, ponle un nombre a tu carpeta y dale aceptar o ingresa a esta pagina y te damos mas informacion ";
             break;
         default:
             botResponse = "Lo siento, no entendí tu consulta. Por favor, ingresa el número correspondiente o una palabra clave válida.";
