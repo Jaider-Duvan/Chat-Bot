@@ -64,7 +64,7 @@
 }
 
 /* Estilos para la respuesta del bot */
-.message.bot {
+.bot-message {
     background-color: rgb(251, 255, 122);
     color: #000; /* Texto en negro */
     padding: 10px;
