@@ -45,7 +45,7 @@ async function sendMessage() {
         // Se limpia el input
         mensajeIngresado.value = "";
         // Limpia los mensajes después de 30 segundos
-        setTimeout(clearMessages, 30000);
+        setTimeout(clearMessages, 60000);
     }
 }
 
@@ -75,16 +75,19 @@ function generateBotResponse(userInput) {
     // Mensaje inicial con las opciones disponibles
     if (input === "" || isNaN(input)) {
         botResponse = "¡Hola! Soy un chatbot. Estaré para ayudarte, Por favor, elige una opción:\n" +
-                      "1. Eliminar Documento\n" +
+                      "1. Enviar un documento a la papelera\n" +
                       "2. Subir archivos \n" +
                       "3. Compartir documento\n" +
-                      "4. Crear carpeta";
+                      "4. Crear carpeta\n" +
+                      "5. Restaurar archivo\n" +
+                      "6. Eliminar permanentemente un archivo\n" +
+                      "7. ¿ya no quieres ser parte de un docuemnto compartido?";
     } else {
         // Utilizamos un switch-case para manejar diferentes tipos de consultas del usuario
         switch (input) {
             case "1":
-            case "eliminar documento":
-                botResponse = "Para eliminar un documento necesitas seguir los siguientes pasos: \n 1. Seleccionar el archivo o carpeta a eliminar \n 2. Da click derecho \n 3. Seleciona la opcion mover a la papelera \n 4. Aceptar ";
+            case "enviar un documento a la papelera":
+                botResponse = "Para enviar un documento a la papelera, necesitas seguir los siguientes pasos: \n 1. Seleccionar el archivo o carpeta a eliminar \n 2. Da click derecho \n 3. Seleciona la opcion mover a la papelera \n 4. Aceptar ";
                 break;
             case "2":
             case "subir archivos":
@@ -98,8 +101,20 @@ function generateBotResponse(userInput) {
             case "crear carpeta":
                 botResponse = "Para crear una carpeta sigue los siguientes pasos:\n1. en la parte izquierda dale en 'Nuevo'\n 2. 'Nueva carpeta', ponle un nombre a tu carpeta \n3. dale 'Aceptar'.";
                 break;
+            case "5":
+            case "Restaurar archivo":
+                botResponse = "Para restaurar un archivo que se envio a la papelera, sigue los siguientes pasos:\n 1. en la parte izquierda dale en 'papelera' \n 2. Selecciona el archivo que deseas recuperar \n3. dale click derecho 'restaruar'.";
+                break;
+            case "6":   
+            case "eliminar permanentemente un archivo":
+                botResponse = "Para eliminar permanentemente un archivo un archivo que se envio a la papelera, sigue los siguientes pasos:\n 1. en la parte izquierda dale en 'papelera' \n 2. Selecciona el archivo que deseas eliminar permanentemente \n3. dale click derecho 'eliminar definitivamente'.";
+                break;
+            case "7":
+            case "¿ya no quieres ser parte de un docuemnto compartido?":
+                botResponse = "si ya no quieres ser parte de un archivo que se ha compartido contigo, sigue los siguientes pasos:\n 1. Selecciona el archivo que compartieron contigo\n2. dale click derecho 'quitar'.";
+                break;
             default:
-                botResponse = "Lo siento, no entendí tu consulta. Estoy aprendiendo cada vez mas para solucionar tus problemas";
+                botResponse = "Lo siento, no entendí tu consulta. Estoy aprendiendo cada vez mas para solucionar tus problemas"; 
         }
     }
 
